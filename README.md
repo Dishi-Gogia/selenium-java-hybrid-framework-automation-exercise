@@ -1,361 +1,344 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=200&section=header&text=Selenium%20Java%20Hybrid%20Framework&fontSize=40&fontColor=ffffff"/>
+</p>
+
 # 🚀 Selenium Java Hybrid Framework - Automation Exercise
 
-A scalable and enterprise-style Selenium Automation Framework developed using Selenium WebDriver, Java, TestNG, Maven, Page Object Model (POM), Page Factory, Data-Driven Testing, Extent Reports, Log4j Logging, and Parallel Execution support.
+A scalable and enterprise-grade **Selenium Test Automation Framework** built using **Java, Selenium WebDriver, TestNG, Maven, Page Object Model (POM), Page Factory, Apache POI, Extent Reports, and Log4j2**.
 
-Designed to demonstrate real-world automation framework architecture, maintainability, reusability, and enterprise QA best practices.
-
----
-
-## 🎯 Overview
-
-Modern automation frameworks should be more than just Selenium scripts.
-
-This framework focuses on:
-
-✔️ Scalability
-
-✔️ Maintainability
-
-✔️ Reusability
-
-✔️ Data-Driven Testing
-
-✔️ Reporting & Logging
-
-✔️ Cross-Browser Execution
-
-✔️ CI/CD Readiness
-
-✔️ Enterprise-Level Design Patterns
-
-The framework automates end-to-end business scenarios using Automation Exercise while showcasing automation architecture commonly used in enterprise QA organizations.
+The framework demonstrates real-world automation architecture, reusable components, data-driven testing, reporting, logging, and enterprise QA best practices.
 
 ---
 
-## 🛠️ Technology Stack
-
-🔹 Java
-
-🔹 Selenium WebDriver 4
-
-🔹 TestNG
-
-🔹 Maven
-
-🔹 Apache POI
-
-🔹 Log4j2
-
-🔹 Extent Reports
-
-🔹 Page Object Model (POM)
-
-🔹 Page Factory
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
+![TestNG](https://img.shields.io/badge/TestNG-red?style=for-the-badge)
+![Maven](https://img.shields.io/badge/Maven-blue?style=for-the-badge)
+![License](https://img.shields.io/github/license/Dishi-Gogia/selenium-java-hybrid-framework-automation-exercise?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/Dishi-Gogia/selenium-java-hybrid-framework-automation-exercise?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Dishi-Gogia/selenium-java-hybrid-framework-automation-exercise?style=for-the-badge)
 
 ---
 
-## ⚡ Framework Features
+# 📑 Table of Contents
 
-### 🔹 Selenium Automation Framework
-
-✔️ Selenium 4 WebDriver
-
-✔️ Page Object Model (POM)
-
-✔️ Page Factory Implementation
-
-✔️ Reusable Page Classes
-
----
-
-### 🔹 Driver Management
-
-✔️ DriverFactory Design Pattern
-
-✔️ ThreadLocal WebDriver
-
-✔️ Parallel Execution Support
-
-✔️ Browser Management
+- Overview
+- Technology Stack
+- Framework Features
+- Automation Scenarios
+- Project Structure
+- Framework Architecture
+- Execution
+- Reporting
+- Screenshots
+- Future Enhancements
+- Related Repositories
+- Author
+- License
 
 ---
 
-### 🔹 Data-Driven Testing
+# 🎯 Overview
 
-✔️ Excel-Based Test Data
+This project demonstrates an enterprise-style Selenium Automation Framework following industry best practices.
 
-✔️ Apache POI Integration
+### Key Objectives
 
-✔️ Generic TestNG DataProvider
-
-✔️ Dynamic Test Data Generation
-
----
-
-### 🔹 Reporting & Logging
-
-✔️ Extent Reports
-
-✔️ Screenshot Capture on Failure
-
-✔️ Log4j Logging
-
-✔️ Test Execution Tracking
+- ✔️ Scalable Architecture
+- ✔️ Reusable Components
+- ✔️ Modular Design
+- ✔️ Data-Driven Testing
+- ✔️ Cross-Browser Ready
+- ✔️ Reporting & Logging
+- ✔️ Parallel Execution Support
+- ✔️ CI/CD Ready Framework
+- ✔️ Enterprise QA Best Practices
 
 ---
 
-### 🔹 Framework Utilities
+# 🌐 Application Under Test
 
-✔️ WebActions Utility
+**Website**
 
-✔️ WaitUtils
+https://automationexercise.com
 
-✔️ ConfigReader
+### Automated Modules
 
-✔️ EnvironmentUtils
-
-✔️ TestDataUtils
-
-✔️ ExcelUtils
-
----
-
-### 🔹 TestNG Features
-
-✔️ Retry Analyzer
-
-✔️ TestNG Listeners
-
-✔️ Parallel Execution
-
-✔️ Suite Management
+- User Registration
+- User Login
+- Home Page Validation
+- Navigation Validation
+- Data-Driven Registration
+- Form Validation
 
 ---
 
-### 🔹 Environment Support
+# 🛠 Technology Stack
 
-✔️ QA Environment
-
-✔️ UAT Environment
-
-✔️ PROD Environment
-
-✔️ Runtime Configuration Support
-
----
-
-## 📚 Business Scenarios Automated
-
-### 🔹 Home Page Validation
-
-✔️ Verify application launches successfully
-
-✔️ Verify Signup/Login link visibility
+| Category | Technology |
+|-----------|------------|
+| Language | Java |
+| Automation | Selenium WebDriver 4 |
+| Test Framework | TestNG |
+| Build Tool | Maven |
+| Design Pattern | Page Object Model (POM) |
+| Page Factory | Selenium PageFactory |
+| Data Driven | Apache POI |
+| Reporting | Extent Reports |
+| Logging | Log4j2 |
+| Version Control | Git & GitHub |
 
 ---
 
-### 🔹 Login Navigation Validation
+# ⚡ Framework Features
 
-✔️ Verify navigation to Signup/Login page
+## Selenium Framework
 
-✔️ Validate login page accessibility
+- Selenium WebDriver 4
+- Page Object Model (POM)
+- Page Factory
+- Reusable Page Classes
 
----
+## Driver Management
 
-### 🔹 User Registration Flow
+- DriverFactory
+- ThreadLocal WebDriver
+- Browser Management
+- Parallel Execution Support
 
-✔️ Create new user account
+## Data-Driven Testing
 
-✔️ Validate Account Information page
+- Excel Test Data
+- Apache POI
+- Generic Data Provider
+- Dynamic Test Data
 
-✔️ Complete registration form
+## Reporting & Logging
 
-✔️ Create account successfully
+- Extent Reports
+- Screenshot Capture
+- Log4j2 Logging
+- Execution Tracking
 
-✔️ Validate Account Created confirmation
+## Framework Utilities
 
----
+- WebActions
+- WaitUtils
+- ConfigReader
+- TestDataUtils
+- ScreenshotUtils
+- Environment Utilities
 
-### 🔹 Data-Driven Registration Testing
+## TestNG
 
-✔️ Multiple test data combinations
-
-✔️ Excel-driven execution
-
-✔️ Dynamic email generation
-
-✔️ Reusable registration workflow
-
----
-
-## 🧠 Framework Architecture
-
-Tests
-
-⬇️
-
-Page Objects
-
-⬇️
-
-WebActions
-
-⬇️
-
-WaitUtils
-
-⬇️
-
-DriverFactory
-
-⬇️
-
-ThreadLocal WebDriver
+- Listeners
+- Retry Analyzer
+- Parallel Execution
+- Suite Management
 
 ---
 
-TestNG
+# 📚 Automation Coverage
 
-⬇️
+Current automated scenarios include:
 
-Listeners
-
-⬇️
-
-Retry Analyzer
-
-⬇️
-
-Extent Reports
-
-⬇️
-
-Screenshots
-
-⬇️
-
-Execution Logs
+- Home Page Validation
+- Login Navigation
+- User Registration
+- Data-Driven Registration
+- Account Creation
+- Validation Messages
+- Form Submission
+- Browser Launch Validation
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-selenium-java-hybrid-framework
-
-├── base
-
-├── factory
-
-├── pages
-
-├── tests
-
-├── utilities
-
-├── listeners
+```text
+selenium-java-hybrid-framework-automation-exercise
 
 ├── reports
-
-├── retry
-
-├── testdata
-
 ├── screenshots
-
-├── config.properties
-
-└── testng.xml
+├── testdata
+├── src
+│   ├── test
+│   │   ├── java
+│   │   │   ├── base
+│   │   │   ├── factory
+│   │   │   ├── listeners
+│   │   │   ├── pages
+│   │   │   ├── reports
+│   │   │   ├── tests
+│   │   │   └── utilities
+│   │   └── resources
+│   │       ├── config.properties
+│   │       └── log4j2.xml
+│
+├── pom.xml
+├── testng.xml
+├── LICENSE
+└── README.md
+```
 
 ---
 
-## 🚀 Execute Tests
+# 🧠 Framework Architecture
 
-### Run Complete Suite
+```text
+                TestNG Suite
+                      │
+                      ▼
+                  BaseTest
+                      │
+                      ▼
+                DriverFactory
+                      │
+                      ▼
+          ThreadLocal WebDriver
+                      │
+                      ▼
+               Page Object Model
+                      │
+                      ▼
+                 WebActions
+                      │
+                      ▼
+                 WaitUtils
+                      │
+                      ▼
+                  Assertions
+                      │
+                      ▼
+              Extent Reports
+                      │
+                      ▼
+        Screenshots + Log4j Logs
+```
 
+---
+
+# ▶️ Execute Framework
+
+## Run Complete Suite
+
+```bash
 mvn clean test
+```
 
-### Run in Edge Browser
+## Run Edge Browser
 
+```bash
 mvn clean test -Dbrowser=edge
+```
 
-### Run in UAT Environment
+## Run QA Environment
 
+```bash
+mvn clean test -Denvironment=qa
+```
+
+## Run UAT Environment
+
+```bash
 mvn clean test -Denvironment=uat
+```
 
 ---
 
-## 📊 Reporting
+# 📊 Reporting & Execution Artifacts
 
-The framework generates:
+The framework automatically generates:
 
-✔️ Extent HTML Reports
+- ✅ Extent HTML Reports
+- ✅ TestNG Reports
+- ✅ Execution Logs
+- ✅ Screenshots during execution
+- ✅ Screenshots on failure
 
-✔️ TestNG Reports
-
-✔️ Execution Logs
-
-✔️ Failure Screenshots
-
-✔️ Detailed Test Execution Results
+> **Note:** Sample reports and screenshots are intentionally included in this repository to demonstrate the framework's reporting and execution capabilities.
 
 ---
 
-## 🔥 Key Highlights
+# 📸 Sample Screenshots
 
-✔️ Enterprise-Style Automation Framework
+Example execution screenshots are available in:
 
-✔️ Real-World QA Framework Design
+```text
+screenshots/
+```
 
-✔️ ThreadLocal Driver Implementation
+Sample reports are available in:
 
-✔️ Data-Driven Testing Architecture
-
-✔️ Cross-Browser Support
-
-✔️ Environment-Based Execution
-
-✔️ CI/CD Ready Structure
-
-✔️ Interview & Portfolio Showcase Project
+```text
+reports/
+```
 
 ---
 
-## 🔮 Future Enhancements
+# 🚀 Future Enhancements
 
-✔️ Product Search Automation
-
-✔️ Add To Cart Flow
-
-✔️ Checkout Validation
-
-✔️ Jenkins Integration
-
-✔️ Selenium Grid Execution
-
-✔️ Docker Support
+- Jenkins CI/CD Integration
+- Selenium Grid
+- Docker Support
+- Cross-Browser Execution
+- GitHub Actions
+- Allure Reports
+- BrowserStack Integration
+- LambdaTest Integration
+- API + UI Automation
 
 ---
 
-## 🔗 Related Repositories
+# 🔗 Related Repositories
 
-👉 Selenium Framework
+### Selenium Java Hybrid Framework
 
-https://github.com/Dishi-Gogia/selenium-java-hybrid-framework
+https://github.com/Dishi-Gogia/selenium-java-hybrid-framework-automation-exercise
 
-👉 Java for QA Engineers
+### Cucumber BDD Framework
+
+(Add Repository)
+
+### REST Assured Framework
+
+(Add Repository)
+
+### Playwright Framework
+
+(Add Repository)
+
+### Java for QA Engineers
 
 https://github.com/Dishi-Gogia/Java-for-QA-Engineers
 
-👉 SQL Validation Queries for QA
+---
 
-https://github.com/Dishi-Gogia/sql-validation-queries
+# 👩‍💻 Author
+
+## Dishi Gogia
+
+**Senior QA Manager | Quality Engineering | Test Automation | Selenium | Java | Salesforce CRM | Oracle CPQ | API Testing**
+
+- GitHub: https://github.com/Dishi-Gogia
+- LinkedIn: https://www.linkedin.com/in/dishi-gogia
 
 ---
 
-## 👩‍💻 Author
+# 📄 License
 
-**Dishi Gogia**
+This project is licensed under the **MIT License**.
 
-Senior QA Manager | Quality Engineering Leader | Selenium Automation | Salesforce CRM | Oracle CPQ | Agile Testing
+---
 
-⭐ If this repository helps, consider giving it a star!
+# 📈 Repository Status
+
+⭐ If you found this repository useful, please consider giving it a **Star**.
+
+Suggestions, improvements, and feedback are always welcome.
+
+---
+
+# 📌 Disclaimer
+
+This project was developed for learning, demonstration, and portfolio purposes to showcase enterprise automation framework design and software testing best practices using Selenium WebDriver and Java.
