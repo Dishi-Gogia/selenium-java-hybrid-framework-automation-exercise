@@ -1,0 +1,15 @@
+target/
+
+logs/
+
+reports/
+
+screenshots/
+
+.idea/
+
+.vscode/
+
+*.class
+
+*.log
