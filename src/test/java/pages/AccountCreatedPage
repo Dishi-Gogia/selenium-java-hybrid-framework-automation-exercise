@@ -1,0 +1,43 @@
+package pages;
+
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utilities.LoggerUtils;
+import utilities.WebActions;
+
+/**
+ * Page Object for Account Created page.
+ * Contains validations related to successful account creation.
+ */
+public class AccountCreatedPage extends BasePage{
+
+    private static final Logger logger = LoggerUtils.getLogger(AccountCreatedPage.class);
+
+    /**
+     * Constructor initializes page elements.
+     * @param driver WebDriver instance
+     */
+    public AccountCreatedPage(WebDriver driver) {
+    	super(driver);
+        logger.info( "Account Created Page initialized successfully");
+    }
+
+    /**
+     * Account Created confirmation message.
+     */
+    @FindBy(xpath = "//b[text()='Account Created!']")
+    private WebElement accountCreatedMessage;
+
+    /**
+     * Validates Account Created message is displayed.
+     * @return true if message is displayed
+     */
+    public boolean isAccountCreatedDisplayed() {
+        logger.info( "Validating Account Created message");
+        return actions.isDisplayed(accountCreatedMessage);
+    }
+}
