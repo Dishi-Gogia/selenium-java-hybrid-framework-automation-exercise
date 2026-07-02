@@ -1,0 +1,39 @@
+package retry;
+
+import org.apache.logging.log4j.Logger;
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+
+import utilities.LoggerUtils;
+
+/**
+ * Retry analyzer for rerunning failed test cases.
+ * Useful for handling intermittent failures caused by
+ * environment instability, network issues, or timing problems.
+ */
+public class RetryAnalyzer implements IRetryAnalyzer {
+
+    private static final Logger logger =
+            LoggerUtils.getLogger(RetryAnalyzer.class);
+
+    private int count = 0;
+
+    private static final int MAX_RETRY = 2;
+
+    /**
+     * Retries failed test execution until maximum retry count is reached.
+     * @param result Test result object
+     * @return true if test should be retried, otherwise false
+     */
+    @Override
+    public boolean retry(ITestResult result) {
+
+        if (count < MAX_RETRY) {
+            count++;
+            logger.info("Retrying Test: {} | Attempt: {}",result.getName(), count);
+            return true;
+        }
+
+        return false;
+    }
+}
