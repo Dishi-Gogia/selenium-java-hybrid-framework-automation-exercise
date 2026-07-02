@@ -1,0 +1,136 @@
+package base;
+
+import java.time.Duration;
+
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import factory.DriverFactory;
+import utilities.ConfigReader;
+import utilities.EnvironmentUtils;
+import utilities.LoggerUtils;
+
+public class BaseTest {
+
+    private static final Logger logger =
+            LoggerUtils.getLogger(BaseTest.class);
+
+    /**
+     * Initializes browser and launches application
+     * before every test execution.
+     */
+    @BeforeMethod
+    public void setup() {
+
+        String browser =
+                ConfigReader.getProperty("browser");
+
+        String environment =
+                ConfigReader.getProperty("environment");
+
+        logger.info("====================================");
+        logger.info("Starting Test Execution");
+        logger.info("Browser Selected : {}", browser);
+        logger.info("Environment Selected : {}", environment);
+
+        WebDriver driver =
+                DriverFactory.initializeBrowser(browser);
+
+        DriverFactory.setDriver(driver);
+
+        logger.info("Browser launched successfully");
+
+        DriverFactory.getDriver()
+                .manage()
+                .window()
+                .maximize();
+
+        logger.info("Browser window maximized");
+
+        int implicitWait =
+                Integer.parseInt(
+                        ConfigReader.getProperty(
+                                "implicitWait"));
+
+        DriverFactory.getDriver()
+                .manage()
+                .timeouts()
+                .implicitlyWait(
+                        Duration.ofSeconds(
+                                implicitWait));
+
+        logger.info(
+                "Implicit Wait configured : {} seconds",
+                implicitWait);
+
+        String url =
+                EnvironmentUtils.getEnvironmentUrl();
+
+        logger.info(
+                "Launching Application URL : {}",
+                url);
+
+        DriverFactory.getDriver().get(url);
+
+        logger.info(
+                "Application launched successfully");
+    }
+
+    /**
+     * Closes browser and cleans up driver instance
+     * after every test execution.
+     */
+    @AfterMethod
+    public void tearDown(
+            ITestResult result) {
+
+        logger.info(
+                "Completed Test : {}",
+                result.getMethod()
+                        .getMethodName());
+
+        logger.info(
+                "Execution Status : {}",
+                getTestStatus(result));
+
+        if (DriverFactory.getDriver() != null) {
+
+            logger.info(
+                    "Closing browser session");
+
+            DriverFactory.getDriver().quit();
+
+            DriverFactory.unload();
+
+            logger.info(
+                    "Browser closed successfully");
+        }
+
+        logger.info("====================================");
+    }
+
+    /**
+     * Returns execution status of test.
+     */
+    private String getTestStatus(
+            ITestResult result) {
+
+        switch (result.getStatus()) {
+
+        case ITestResult.SUCCESS:
+            return "PASS";
+
+        case ITestResult.FAILURE:
+            return "FAIL";
+
+        case ITestResult.SKIP:
+            return "SKIP";
+
+        default:
+            return "UNKNOWN";
+        }
+    }
+}
